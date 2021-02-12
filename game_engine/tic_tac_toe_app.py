@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Dict
 
-from tic_tac_toe_game import TicTacToeGame
-from tic_tac_toe_common_lib import TicTacToeGameInfo, TicTacToeTurn, UserInfo
-from tic_tac_toe_app_abstract import AbstractTicTacToeApp
+from .tic_tac_toe_game import TicTacToeGame
+from .tic_tac_toe_common_lib import TicTacToeGameInfo, TicTacToeTurn, UserInfo
+from .tic_tac_toe_app_abstract import AbstractTicTacToeApp
 
 import random
 import uuid

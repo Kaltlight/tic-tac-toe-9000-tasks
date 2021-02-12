@@ -8,8 +8,8 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Dict
 
-from tic_tac_toe_game import TicTacToeGame
-from tic_tac_toe_common_lib import TicTacToeGameInfo, UserInfo, TicTacToeTurn
+from .tic_tac_toe_game import TicTacToeGame
+from .tic_tac_toe_common_lib import TicTacToeGameInfo, UserInfo, TicTacToeTurn
 
 class AbstractTicTacToeApp(ABC):
     @abstractmethod
