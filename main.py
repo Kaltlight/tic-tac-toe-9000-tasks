@@ -1,4 +1,4 @@
-from tic_tac_toe_game import TicTacToeGame, TicTacToeGameInfo, TicTacToeTurn
+from game_engine import TicTacToeGame, TicTacToeGameInfo, TicTacToeTurn
 
 print("Enter first player's name: ")
 first = input()
