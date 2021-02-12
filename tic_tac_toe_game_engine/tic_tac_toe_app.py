@@ -34,9 +34,4 @@ class TicTacToeApp(AbstractTicTacToeApp):
         return UserInfo(name, password)
 
     def is_autentified(self, user: UserInfo) -> bool:
-        pass
-
-app = TicTacToeApp()
-ggid = app.start_game("Petya", "Vasya").game_id
-print(app.do_turn(TicTacToeTurn("Petya", 0, 0), ggid))
-app.add_user()
+        return self._passwords[user.user_id] == user.secret_key
