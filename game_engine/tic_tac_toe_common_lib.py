@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod, abstractproperty
 from typing import List, Callable
 from dataclasses import dataclass
 
@@ -17,18 +17,18 @@ class TicTacToeGameInfo:
     sequence_of_turns: List[TicTacToeTurn]
     first_player_id: str
     second_player_id: str
-    winner_id: str # а какие могут быть варианты?
+    winner_id: str
+
+
+@dataclass
+class UserInfo:
+    user_id: str
+    secret_key: str
 
 
 class AbstractTicTacToeGame(ABC):
     @abstractmethod
-    def __init__(
-            self,
-            game_id: str,
-            first_player_id: str,
-            second_player_id: str,
-            strategy: Callable[[TicTacToeGameInfo], TicTacToeTurn] = None
-        ) -> None:
+    def __init__(self, game_id: str, first_player_id: str, second_player_id: str) -> None:
         """пока просто раскладываем по полям"""
 
     @abstractmethod
@@ -40,7 +40,9 @@ class AbstractTicTacToeGame(ABC):
         """сначала проверяем корректность, для проверки используйте is_turn_correct,
         а возвращаем TicTacToeGameInfo"""
 
-    @abstractmethod
+    @abstractproperty
     def get_game_info(self) -> TicTacToeGameInfo:
         """обычный геттер"""
 
+# https://colab.research.google.com/drive/1EU8d5N4BupCAcoauf2coB_tZWaSYXWGv#scrollTo=amlz9_ZA8am4
+# https://github.com/DarkSquirrelComes/tic-tac-toe-9000-tasks/blob/main/game_engine_test.py
