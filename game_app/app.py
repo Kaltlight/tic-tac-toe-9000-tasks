@@ -14,7 +14,7 @@ class TicTacToeApp:
         self._games[gid] = game
         return game.get_game_info()
 
-    def get_game_by_id(self, game_id: str, user_id: str) -> TicTacToeGameInfo:
+    def get_game_by_id(self, game_id: str) -> TicTacToeGameInfo:
         return self._games[game_id].get_game_info()
 
     def do_turn(self, turn: TicTacToeTurn, game_id: str) -> TicTacToeGameInfo:

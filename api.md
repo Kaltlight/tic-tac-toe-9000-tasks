@@ -21,7 +21,7 @@ There I will suggest how api could work in my opinion.
     }
     ```
 
-2. GET: ```/get_game_by_id?game_id=4ef414ed-1cad-44ea-b0f4-df097c728543&user_id=someone```
+2. GET: ```/get_game_by_id?game_id=4ef414ed-1cad-44ea-b0f4-df097c728543```
     Returns game information, requires parameter ```game_id```.
 
     Responce:
@@ -40,8 +40,8 @@ There I will suggest how api could work in my opinion.
     }
     ```
 
-3. GET: ```/do_turn?turn=Petya,0,0&game_id=4ef414ed-1cad-44ea-b0f4-df097c728543```
-    Makes turn in the game, requires parameters ```turn``` and ```game_id```. ```turn``` should be written as ```player_id,x,y```, where ```player_id``` is id of the player, ```x```, ```y``` are coordinates of the turn.
+3. GET: ```/do_turn?player_id=Petya&x=0&y=0&game_id=4ef414ed-1cad-44ea-b0f4-df097c728543```
+    Makes turn in the game, requires parameters ```player_id```, ```x```, ```y``` and ```game_id```. ```player_id``` is id of the player, ```x``` is x coordinate of the turn, ```y``` is y coordinate of the turn. 
 
     Responce:
     ```json
