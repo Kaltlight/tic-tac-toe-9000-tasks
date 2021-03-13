@@ -69,7 +69,7 @@ class TicTacToeGame(AbstractTicTacToeGame):
         if "O" not in row or "X" not in row:
             draw = False
         if draw == True:
-            self.__winner_id = "draw"
+            self.__winner_id = "Draw"
 
     def get_game_info(self) -> TicTacToeGameInfo:
         result = TicTacToeGameInfo(
